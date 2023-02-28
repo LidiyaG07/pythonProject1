@@ -1,16 +1,20 @@
-# This is a sample Python script.
+# Задача 10: На столе лежат n монеток. Некоторые из них лежат вверх решкой, а некоторые – гербом.
+# Определите минимальное число монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной.
+# Выведите минимальное количество монет, которые нужно перевернуть
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print('Введите число монеток: ')
+n = int(input())
+count_zero = 0
+count_one = 0
 
+for i in range(n):
+    x = int(input())
+    if x == 0:
+        count_zero += 1
+    else:
+        count_one += 1
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if count_one > count_zero:
+    print(count_zero)
+else:
+    print(count_one)
